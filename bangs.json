@@ -1,4 +1,229 @@
 [
+  [
+  {
+    "bang": "!google",
+    "name": "Google Search",
+    "url": "https://www.google.com/search?q=$1",
+    "label": "Google"
+  },
+  {
+    "bang": "!bing",
+    "name": "Bing Search",
+    "url": "https://www.bing.com/search?q=$1",
+    "label": "Bing"
+  },
+  {
+    "bang": "!ddg",
+    "name": "DuckDuckGo Search",
+    "url": "https://duckduckgo.com/?q=$1",
+    "label": "DuckDuckGo"
+  },
+  {
+    "bang": "!youtube",
+    "name": "YouTube Search",
+    "url": "https://www.youtube.com/results?search_query=$1",
+    "label": "YouTube"
+  },
+  {
+    "bang": "!reddit",
+    "name": "Reddit Search",
+    "url": "https://www.reddit.com/search/?q=$1",
+    "label": "Reddit"
+  },
+  {
+    "bang": "!github",
+    "name": "GitHub Search",
+    "url": "https://github.com/search?q=$1",
+    "label": "GitHub"
+  },
+  {
+    "bang": "!gitlab",
+    "name": "GitLab Search",
+    "url": "https://gitlab.com/search?search=$1",
+    "label": "GitLab"
+  },
+  {
+    "bang": "!stackoverflow",
+    "name": "Stack Overflow Search",
+    "url": "https://stackoverflow.com/search?q=$1",
+    "label": "Stack Overflow"
+  },
+  {
+    "bang": "!amazon",
+    "name": "Amazon Search",
+    "url": "https://www.amazon.com/s?k=$1",
+    "label": "Amazon"
+  },
+  {
+    "bang": "!ebay",
+    "name": "eBay Search",
+    "url": "https://www.ebay.com/sch/i.html?_nkw=$1",
+    "label": "eBay"
+  },
+  {
+    "bang": "!walmart",
+    "name": "Walmart Search",
+    "url": "https://www.walmart.com/search?q=$1",
+    "label": "Walmart"
+  },
+  {
+    "bang": "!target",
+    "name": "Target Search",
+    "url": "https://www.target.com/s?searchTerm=$1",
+    "label": "Target"
+  },
+  {
+    "bang": "!etsy",
+    "name": "Etsy Search",
+    "url": "https://www.etsy.com/search?q=$1",
+    "label": "Etsy"
+  },
+  {
+    "bang": "!imdb",
+    "name": "IMDb Search",
+    "url": "https://www.imdb.com/find/?q=$1",
+    "label": "IMDb"
+  },
+  {
+    "bang": "!spotify",
+    "name": "Spotify Search",
+    "url": "https://open.spotify.com/search/$1",
+    "label": "Spotify"
+  },
+  {
+    "bang": "!soundcloud",
+    "name": "SoundCloud Search",
+    "url": "https://soundcloud.com/search?q=$1",
+    "label": "SoundCloud"
+  },
+  {
+    "bang": "!tiktok",
+    "name": "TikTok Search",
+    "url": "https://www.tiktok.com/search?q=$1",
+    "label": "TikTok"
+  },
+  {
+    "bang": "!x",
+    "name": "X Search",
+    "url": "https://x.com/search?q=$1",
+    "label": "X"
+  },
+  {
+    "bang": "!linkedin",
+    "name": "LinkedIn Search",
+    "url": "https://www.linkedin.com/search/results/all/?keywords=$1",
+    "label": "LinkedIn"
+  },
+  {
+    "bang": "!pinterest",
+    "name": "Pinterest Search",
+    "url": "https://www.pinterest.com/search/pins/?q=$1",
+    "label": "Pinterest"
+  },
+  {
+    "bang": "!twitch",
+    "name": "Twitch Search",
+    "url": "https://www.twitch.tv/search?term=$1",
+    "label": "Twitch"
+  },
+  {
+    "bang": "!indeed",
+    "name": "Indeed Jobs Search",
+    "url": "https://www.indeed.com/jobs?q=$1",
+    "label": "Indeed"
+  },
+  {
+    "bang": "!glassdoor",
+    "name": "Glassdoor Search",
+    "url": "https://www.glassdoor.com/Search/results.htm?keyword=$1",
+    "label": "Glassdoor"
+  },
+  {
+    "bang": "!zillow",
+    "name": "Zillow Search",
+    "url": "https://www.zillow.com/homes/$1/",
+    "label": "Zillow"
+  },
+  {
+    "bang": "!realtor",
+    "name": "Realtor.com Search",
+    "url": "https://www.realtor.com/realestateandhomes-search/$1",
+    "label": "Realtor.com"
+  },
+  {
+    "bang": "!tripadvisor",
+    "name": "Tripadvisor Search",
+    "url": "https://www.tripadvisor.com/Search?q=$1",
+    "label": "Tripadvisor"
+  },
+  {
+    "bang": "!yelp",
+    "name": "Yelp Search",
+    "url": "https://www.yelp.com/search?find_desc=$1",
+    "label": "Yelp"
+  },
+  {
+    "bang": "!maps",
+    "name": "Google Maps Search",
+    "url": "https://www.google.com/maps/search/$1",
+    "label": "Google Maps"
+  },
+  {
+    "bang": "!wikipedia",
+    "name": "Wikipedia Search",
+    "url": "https://en.wikipedia.org/w/index.php?search=$1",
+    "label": "Wikipedia"
+  },
+  {
+    "bang": "!archive",
+    "name": "Wayback Machine Search",
+    "url": "https://web.archive.org/web/*/$1",
+    "label": "Internet Archive"
+  },
+  {
+    "bang": "!npm",
+    "name": "npm Search",
+    "url": "https://www.npmjs.com/search?q=$1",
+    "label": "npm"
+  },
+  {
+    "bang": "!pypi",
+    "name": "PyPI Search",
+    "url": "https://pypi.org/search/?q=$1",
+    "label": "PyPI"
+  },
+  {
+    "bang": "!huggingface",
+    "name": "Hugging Face Search",
+    "url": "https://huggingface.co/search/full-text?q=$1",
+    "label": "Hugging Face"
+  },
+  {
+    "bang": "!arxiv",
+    "name": "arXiv Search",
+    "url": "https://arxiv.org/search/?query=$1&searchtype=all",
+    "label": "arXiv"
+  },
+  {
+    "bang": "!scholar",
+    "name": "Google Scholar Search",
+    "url": "https://scholar.google.com/scholar?q=$1",
+    "label": "Google Scholar"
+  },
+  {
+    "bang": "!pubmed",
+    "name": "PubMed Search",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/?term=$1",
+    "label": "PubMed"
+  }
+]
+  {
+    "bang": "!enwiki",
+    "name": "English Wikipedia",
+    "url": "https://en.wikipedia.org/w/index.php?search=$1",
+    "id": "http://www.wikidata.org/entity/P10006",
+    "label": "English Wikipedia"
+  },
   {
     "bang": "!allsides",
     "name": "AllSides ID",
@@ -222,13 +447,6 @@
     "url": "https://www.euroncap.com/en/search-results/?query=$1",
     "id": "http://www.wikidata.org/entity/P10435",
     "label": "Euro NCAP ID"
-  },
-  {
-    "bang": "!simpsonswiki",
-    "name": "Wikisimpsons article ID",
-    "url": "https://simpsonswiki.com/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q110551607",
-    "label": "Wikisimpsons"
   },
   {
     "bang": "!rusavangard",
@@ -721,13 +939,6 @@
     "label": "Letterboxd actor ID"
   },
   {
-    "bang": "!fandom",
-    "name": "Fandom article ID",
-    "url": "https://wikis.fandom.com/wiki/Special:Search?query=$1&scope=cross-wiki",
-    "id": "http://www.wikidata.org/entity/P6262",
-    "label": "Fandom article ID"
-  },
-  {
     "bang": "!rebrickable",
     "name": "LEGO set ID",
     "url": "https://rebrickable.com/sets/?q=$1",
@@ -924,13 +1135,6 @@
     "label": "Jaxsta profile ID"
   },
   {
-    "bang": "!wikiapiary",
-    "name": "WikiApiary wiki ID",
-    "url": "https://wikiapiary.com/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/P7072",
-    "label": "WikiApiary wiki ID"
-  },
-  {
     "bang": "!spotify",
     "name": "Spotify show/podcast ID",
     "url": "https://open.spotify.com/search/show:$1",
@@ -1099,13 +1303,6 @@
     "label": "Priberam Dictionary of the Portuguese Language"
   },
   {
-    "bang": "!fallout",
-    "name": "Fallout Wiki ID",
-    "url": "https://fallout.wiki/index.php?search=$1&title=Special:Search&profile=advanced&fulltext=1&ns0=1",
-    "id": "http://www.wikidata.org/entity/P11589",
-    "label": "Fallout Wiki ID"
-  },
-  {
     "bang": "!unicas",
     "name": "CassiOpeA author ID",
     "url": "https://iris.unicas.it/browse?type=author&authority=rp$1",
@@ -1232,25 +1429,11 @@
     "label": "Digicarmel ID"
   },
   {
-    "bang": "!wikichip",
-    "name": "WikiChip article ID",
-    "url": "https://en.wikichip.org/w/index.php?title=Special%3ASearch&search=$1&go=",
-    "id": "http://www.wikidata.org/entity/P12029",
-    "label": "WikiChip article ID"
-  },
-  {
     "bang": "!ifttt",
     "name": "IFTTT service ID",
     "url": "https://ifttt.com/search/query/$1",
     "id": "http://www.wikidata.org/entity/P12307",
     "label": "IFTTT service ID"
-  },
-  {
-    "bang": "!doomwiki",
-    "name": "Doom Wiki ID",
-    "url": "https://doomwiki.org/wiki/Special:Search?search=$1&go=1&x=10&y=10",
-    "id": "http://www.wikidata.org/entity/P12547",
-    "label": "Doom Wiki ID"
   },
   {
     "bang": "!icannwiki",
@@ -1281,44 +1464,9 @@
     "label": "IsThereAnyDeal ID"
   },
   {
-    "bang": "!runescape",
-    "name": "Weird Gloop article ID",
-    "url": "https://classic.runescape.wiki/?search=$1&title=Special:Search&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P12473",
-    "label": "Weird Gloop article ID"
-  },
-  {
-    "bang": "!minecraft",
-    "name": "Weird Gloop article ID",
-    "url": "https://de.minecraft.wiki/?search=$1&title=Spezial:Suche&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P12473",
-    "label": "Weird Gloop article ID"
-  },
-  {
     "bang": "!weirdgloop",
     "name": "Weird Gloop article ID",
     "url": "https://meta.weirdgloop.org/?search=$1&title=Special:Search&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P12473",
-    "label": "Weird Gloop article ID"
-  },
-  {
-    "bang": "!survivors",
-    "name": "Weird Gloop article ID",
-    "url": "https://vampire.survivors.wiki/?search=$1&title=Special:Search&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P12473",
-    "label": "Weird Gloop article ID"
-  },
-  {
-    "bang": "!leagueoflegends",
-    "name": "Weird Gloop article ID",
-    "url": "https://wiki.leagueoflegends.com/en-us/?search=$1&title=Special:Search&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P12473",
-    "label": "Weird Gloop article ID"
-  },
-  {
-    "bang": "!warframe",
-    "name": "Weird Gloop article ID",
-    "url": "https://wiki.warframe.com/?search=$1&title=Special:Search&fulltext=1",
     "id": "http://www.wikidata.org/entity/P12473",
     "label": "Weird Gloop article ID"
   },
@@ -1440,13 +1588,6 @@
     "url": "https://academictree.org/literature/peoplelist.php?searchname=$1&searchalltrees=1&pidconn=-1&allfields=1",
     "id": "http://www.wikidata.org/entity/P2381",
     "label": "Academic Tree ID"
-  },
-  {
-    "bang": "!ballotpedia",
-    "name": "Ballotpedia ID",
-    "url": "https://ballotpedia.org/wiki/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/P2390",
-    "label": "Ballotpedia ID"
   },
   {
     "bang": "!dblp",
@@ -1638,13 +1779,6 @@
     "label": "Panjab Digital Library ID"
   },
   {
-    "bang": "!uni-trier",
-    "name": "MiMoText ID",
-    "url": "https://data.mimotext.uni-trier.de/w/index.php?search=$1&title=Special%3ASearch&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P12047",
-    "label": "MiMoText ID"
-  },
-  {
     "bang": "!ag",
     "name": "RAWG tag ID",
     "url": "https://ag.ru/search?query=$1",
@@ -1671,13 +1805,6 @@
     "url": "https://combineoverwiki.net/index.php?title=Special:Search&profile=default&fulltext=Search&search=$1",
     "id": "http://www.wikidata.org/entity/P12536",
     "label": "Combine OverWiki ID"
-  },
-  {
-    "bang": "!valvesoftware",
-    "name": "Valve Developer Community article ID",
-    "url": "https://developer.valvesoftware.com/w/index.php?search=$1&title=Special%3ASearch&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P12093",
-    "label": "Valve Developer Community article ID"
   },
   {
     "bang": "!mos",
@@ -1769,13 +1896,6 @@
     "url": "http://www.perseus.tufts.edu/hopper/searchresults?q=$1&doc=Perseus:text:1999.04.0006",
     "id": "http://www.wikidata.org/entity/P13136",
     "label": "Princeton Encyclopedia of Classical Sites ID"
-  },
-  {
-    "bang": "!coasterpedia",
-    "name": "Coasterpedia ID",
-    "url": "https://coasterpedia.net/w/index.php?title=Special:Search&fulltext=1&search=$1&ns0=1",
-    "id": "http://www.wikidata.org/entity/P13558",
-    "label": "Coasterpedia ID"
   },
   {
     "bang": "!ahdictionary",
@@ -1909,13 +2029,6 @@
     "url": "https://www.leopoldina.org/mitglieder/mitglieder-seit-1652/?tx_solr[q]=$1",
     "id": "http://www.wikidata.org/entity/P10299",
     "label": "Leopoldina member ID (new)"
-  },
-  {
-    "bang": "!strindahistorielag",
-    "name": "WikiStrinda article ID",
-    "url": "https://www.strindahistorielag.no/wiki/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/P10231",
-    "label": "WikiStrinda article ID"
   },
   {
     "bang": "!nzs",
@@ -2408,13 +2521,6 @@
     "label": "ThENC@ ID"
   },
   {
-    "bang": "!ametsoc",
-    "name": "Glossary of Meteorology ID",
-    "url": "https://glossary.ametsoc.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/P10260",
-    "label": "Glossary of Meteorology ID"
-  },
-  {
     "bang": "!numista",
     "name": "Numista ID",
     "url": "https://en.numista.com/catalogue/index.php?r=hello",
@@ -2602,13 +2708,6 @@
     "url": "http://enc.cap.ru/?t=search&ftext=$1",
     "id": "http://www.wikidata.org/entity/P10598",
     "label": "Chuvash Encyclopedia topic ID"
-  },
-  {
-    "bang": "!evitebsk",
-    "name": "Viciebsk Encyclopedia ID",
-    "url": "http://evitebsk.com/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/P10443",
-    "label": "Viciebsk Encyclopedia ID"
   },
   {
     "bang": "!rbc",
@@ -2996,13 +3095,6 @@
     "label": "Academy Awards Database film ID"
   },
   {
-    "bang": "!wikiart",
-    "name": "WikiArt ID",
-    "url": "https://www.wikiart.org/en/Search/$1",
-    "id": "http://www.wikidata.org/entity/P6002",
-    "label": "WikiArt ID"
-  },
-  {
     "bang": "!garzantilinguistica",
     "name": "Garzanti Linguistica ID",
     "url": "https://www.garzantilinguistica.it/ricerca/?q=$1",
@@ -3043,13 +3135,6 @@
     "url": "https://www.ncpedia.org/gsearch?query=$1",
     "id": "http://www.wikidata.org/entity/P6284",
     "label": "NCpedia ID"
-  },
-  {
-    "bang": "!pcgamingwiki",
-    "name": "PCGamingWiki ID",
-    "url": "https://www.pcgamingwiki.com/w/index.php?search=$1&title=Special%3ASearch",
-    "id": "http://www.wikidata.org/entity/P6337",
-    "label": "PCGamingWiki ID"
   },
   {
     "bang": "!successiomiro",
@@ -3416,13 +3501,6 @@
     "label": "KRS number"
   },
   {
-    "bang": "!playdate-wiki",
-    "name": "Playdate community wiki ID",
-    "url": "https://playdate-wiki.com/wiki/index.php?search=$1&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P12146",
-    "label": "Playdate community wiki ID"
-  },
-  {
     "bang": "!millibase",
     "name": "MilliBase taxon ID",
     "url": "https://millibase.org/aphia.php?p=taxlist&searchpar=0&tComp=begins&tName=$1&action=search&rSkips=0&adv=0",
@@ -3491,13 +3569,6 @@
     "url": "https://prosperopatches.com/search?q=$1&p=1",
     "id": "http://www.wikidata.org/entity/P12437",
     "label": "PROSPEROPatches game ID"
-  },
-  {
-    "bang": "!quakewiki",
-    "name": "Quake Wiki ID",
-    "url": "https://quakewiki.org/wiki/Special:Search?search=$1&go=1&x=0&y=0",
-    "id": "http://www.wikidata.org/entity/P12440",
-    "label": "Quake Wiki ID"
   },
   {
     "bang": "!kupigolos",
@@ -3631,13 +3702,6 @@
     "url": "https://meatballwiki.org/search?q=$1",
     "id": "http://www.wikidata.org/entity/Q1632463",
     "label": "MeatballWiki"
-  },
-  {
-    "bang": "!lostmediawiki",
-    "name": "The Lost Media Wiki",
-    "url": "https://lostmediawiki.com/w/index.php?search=$1&go=Go",
-    "id": "http://www.wikidata.org/entity/Q70474323",
-    "label": "The Lost Media Wiki"
   },
   {
     "bang": "!fetlife",
@@ -3822,13 +3886,6 @@
     "label": "Atlas of Endangered Alphabets"
   },
   {
-    "bang": "!aw-wiki",
-    "name": "AW-Wiki",
-    "url": "https://www.aw-wiki.de/w/index.php?title=Spezial%3ASuche&search=$1&fulltext=1",
-    "id": "http://www.wikidata.org/entity/Q134448312",
-    "label": "AW-Wiki"
-  },
-  {
     "bang": "!goodreads",
     "name": "Goodreads author ID",
     "url": "https://www.goodreads.com/search?utf8=%E2%9C%93&q=$1&search_type=books&search%5Bfield%5D=author",
@@ -3920,13 +3977,6 @@
     "label": "The Marginalian"
   },
   {
-    "bang": "!prepedia",
-    "name": "Polish Prepedia",
-    "url": "https://pl.prepedia.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q134621414",
-    "label": "Polish Prepedia"
-  },
-  {
     "bang": "!bruzz",
     "name": "BRUZZ.be",
     "url": "https://www.bruzz.be/zoeken?query=$1",
@@ -3939,13 +3989,6 @@
     "url": "https://rimworldwiki.com/index.php?search=$1",
     "id": "http://www.wikidata.org/entity/Q137921528",
     "label": "RimWorld Wiki"
-  },
-  {
-    "bang": "!pzwiki",
-    "name": "Project Zomboid Wiki",
-    "url": "https://pzwiki.net/w/index.php?title=Special:Search&search=$1",
-    "id": "http://www.wikidata.org/entity/Q137921542",
-    "label": "Project Zomboid Wiki"
   },
   {
     "bang": "!dictionaryportal",
@@ -4009,13 +4052,6 @@
     "url": "https://macau.uni-kiel.de/servlets/solr/search?condQuery=$1",
     "id": "http://www.wikidata.org/entity/Q124129051",
     "label": "MACAU: Open Access Repository of Kiel University"
-  },
-  {
-    "bang": "!tetris",
-    "name": "Tetris.wiki",
-    "url": "https://tetris.wiki/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q135291620",
-    "label": "Tetris.wiki"
   },
   {
     "bang": "!prisma",
@@ -4872,13 +4908,6 @@
     "label": "Viasona ID"
   },
   {
-    "bang": "!rdklabor",
-    "name": "Reallexikon zur Deutschen Kunstgeschichte ID",
-    "url": "https://www.rdklabor.de/w/index.php?search=$1&title=Spezial%3ASuche&go=Seite",
-    "id": "http://www.wikidata.org/entity/P9500",
-    "label": "Reallexikon zur Deutschen Kunstgeschichte ID"
-  },
-  {
     "bang": "!stiftung-digitale-spielekultur",
     "name": "Games und Erinnerungskultur Datenbank ID",
     "url": "https://www.stiftung-digitale-spielekultur.de/games-erinnerungskultur/?drts-search=1&search_keyword%5Btext%5D=$1",
@@ -5069,10 +5098,10 @@
   },
   {
     "bang": "!reddit",
-    "name": "r/science",
-    "url": "https://www.reddit.com/r/science/search?q=$1&restrict_sr=1",
+    "name": "reddit",
+    "url": "https://www.reddit.com/search?q=$1",
     "id": "http://www.wikidata.org/entity/Q24207151",
-    "label": "r/science"
+    "label": "reddot"
   },
   {
     "bang": "!forvo",
@@ -5080,13 +5109,6 @@
     "url": "https://forvo.com/search/$1",
     "id": "http://www.wikidata.org/entity/Q2372053",
     "label": "Forvo"
-  },
-  {
-    "bang": "!wikipedia",
-    "name": "Egyptian Arabic Wikipedia",
-    "url": "https://arz.wikipedia.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q2374285",
-    "label": "Egyptian Arabic Wikipedia"
   },
   {
     "bang": "!karaoketexty",
@@ -5129,13 +5151,6 @@
     "url": "https://discourse.nixos.org/search?q=$1",
     "id": "http://www.wikidata.org/entity/Q21998874",
     "label": "NixOS"
-  },
-  {
-    "bang": "!wiktionary",
-    "name": "Armenian Wiktionary",
-    "url": "https://hy.wiktionary.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q22001379",
-    "label": "Armenian Wiktionary"
   },
   {
     "bang": "!libgen",
@@ -5318,13 +5333,6 @@
     "url": "https://www.clubdam.com/karaokesearch/?keyword=$1&type=artist",
     "id": "http://www.wikidata.org/entity/P14501",
     "label": "DAM artist ID"
-  },
-  {
-    "bang": "!boobpedia",
-    "name": "Boobpedia",
-    "url": "http://www.boobpedia.com/wiki/index.php?title=Special%3ASearch&search=$1&go=Go",
-    "id": "http://www.wikidata.org/entity/Q25457707",
-    "label": "Boobpedia"
   },
   {
     "bang": "!mozilla",
@@ -5845,20 +5853,6 @@
     "label": "abbreviations.com"
   },
   {
-    "bang": "!wuerzburgwiki",
-    "name": "WürzburgWiki",
-    "url": "https://wuerzburgwiki.de/w/index.php?title=Spezial%3ASuche&search=$1&fulltext=1",
-    "id": "http://www.wikidata.org/entity/Q28466308",
-    "label": "WürzburgWiki"
-  },
-  {
-    "bang": "!glyphwiki",
-    "name": "GlyphWiki",
-    "url": "https://glyphwiki.org/wiki/Special:Search?search=$1",
-    "id": "http://www.wikidata.org/entity/Q28684738",
-    "label": "GlyphWiki"
-  },
-  {
     "bang": "!snaccooperative",
     "name": "SNAC",
     "url": "http://snaccooperative.org/?term=$1&command=search",
@@ -6004,13 +5998,6 @@
     "url": "https://www.boe.es/buscar/act.php?id=$1",
     "id": "http://www.wikidata.org/entity/P4256",
     "label": "BOE ID"
-  },
-  {
-    "bang": "!wikidata",
-    "name": "Wikimedia username",
-    "url": "https://www.wikidata.org/w/index.php?search=User:$1&title=Special:Search&profile=advanced&fulltext=1&ns0=1&ns120=1",
-    "id": "http://www.wikidata.org/entity/P4174",
-    "label": "Wikimedia username"
   },
   {
     "bang": "!eprints",
@@ -6174,13 +6161,6 @@
     "label": "Plant Illustrations artist ID"
   },
   {
-    "bang": "!antwiki",
-    "name": "AntWiki article ID",
-    "url": "https://antwiki.org/wiki/index.php?search=$1&title=Special%3ASearch&go=Go",
-    "id": "http://www.wikidata.org/entity/P6812",
-    "label": "AntWiki article ID"
-  },
-  {
     "bang": "!uni-koeln",
     "name": "Arachne object ID",
     "url": "https://arachne.uni-koeln.de/arachne/index.php?view[layout]=search_result_overview&search[constraints]=$1",
@@ -6228,13 +6208,6 @@
     "url": "https://en.touhouwiki.net/index.php?search=$1",
     "id": "http://www.wikidata.org/entity/Q125200460",
     "label": "Touhou Wiki"
-  },
-  {
-    "bang": "!uesp",
-    "name": "The Unofficial Elder Scrolls Pages",
-    "url": "https://en.uesp.net/wiki/Special:Search?search=$1",
-    "id": "http://www.wikidata.org/entity/Q125200532",
-    "label": "The Unofficial Elder Scrolls Pages"
   },
   {
     "bang": "!fimfiction",
@@ -6319,13 +6292,6 @@
     "url": "https://www.emeraldgrouppublishing.com/publish-with-us/publish-in-a-journal/find-a-journal?sort_bef_combine=title_ASC&search_api_fulltext=$1",
     "id": "http://www.wikidata.org/entity/P12905",
     "label": "Emerald Group Publishing journal ID"
-  },
-  {
-    "bang": "!jedipedia",
-    "name": "Jedipedia.net ID",
-    "url": "https://www.jedipedia.net/w/index.php?title=Spezial:Suche&fulltext=1&search=$1",
-    "id": "http://www.wikidata.org/entity/P12741",
-    "label": "Jedipedia.net ID"
   },
   {
     "bang": "!gamingonlinux",
@@ -6426,20 +6392,6 @@
     "label": "Ecosia"
   },
   {
-    "bang": "!cemu",
-    "name": "Cemu Wiki",
-    "url": "https://wiki.cemu.info/index.php?title=Special%3ASearch&search=$1&fulltext=Search",
-    "id": "http://www.wikidata.org/entity/Q126916744",
-    "label": "Cemu Wiki"
-  },
-  {
-    "bang": "!pcsx2",
-    "name": "PCSX2 Wiki",
-    "url": "https://wiki.pcsx2.net/index.php?search=$1&title=Special%3ASearch&fulltext=Search",
-    "id": "http://www.wikidata.org/entity/Q123753352",
-    "label": "PCSX2 Wiki"
-  },
-  {
     "bang": "!filmscoop",
     "name": "filmscoop",
     "url": "http://filmscoop.it/ricerca/risultati.asp?t=$1",
@@ -6482,13 +6434,6 @@
     "label": "Weizenbaum Library"
   },
   {
-    "bang": "!handwiki",
-    "name": "HandWiki",
-    "url": "https://handwiki.org/wiki/search/form.php?search=$1&profile=default&title=Special%3ASearch&go=Go",
-    "id": "http://www.wikidata.org/entity/Q127428936",
-    "label": "HandWiki"
-  },
-  {
     "bang": "!elonetplus",
     "name": "Elonet+",
     "url": "https://elonetplus.fi/search?value=$1",
@@ -6503,39 +6448,11 @@
     "label": "EA games ID"
   },
   {
-    "bang": "!hv-her-wan",
-    "name": "Q123511173",
-    "url": "https://wiki.hv-her-wan.de/w/index.php?search=$1&title=Spezial%3ASuche&go=Seite",
-    "id": "http://www.wikidata.org/entity/Q123511173",
-    "label": "Q123511173"
-  },
-  {
     "bang": "!rediff",
     "name": "Rediff",
     "url": "https://www.rediff.com/search/",
     "id": "http://www.wikidata.org/entity/Q140676",
     "label": "Rediff"
-  },
-  {
-    "bang": "!fuerthwiki",
-    "name": "Fürthwiki",
-    "url": "https://www.fuerthwiki.de/wiki/index.php?search=$1&title=Spezial%3ASuche&fulltext=1",
-    "id": "http://www.wikidata.org/entity/Q1301495",
-    "label": "Fürthwiki"
-  },
-  {
-    "bang": "!proc",
-    "name": "Perrypedia",
-    "url": "https://www.perrypedia.proc.org/mediawiki/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q1348020",
-    "label": "Perrypedia"
-  },
-  {
-    "bang": "!wikiindex",
-    "name": "WikiIndex",
-    "url": "https://wikiindex.org/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q14003761",
-    "label": "WikiIndex"
   },
   {
     "bang": "!ufs",
@@ -6564,20 +6481,6 @@
     "url": "https://namedic.jp/persons/list/$1?match=1",
     "id": "http://www.wikidata.org/entity/Q128797782",
     "label": "Namedic"
-  },
-  {
-    "bang": "!translatewiki",
-    "name": "translatewiki.net",
-    "url": "https://translatewiki.net/w/i.php?search=$1&title=Special:Search",
-    "id": "http://www.wikidata.org/entity/Q9376349",
-    "label": "translatewiki.net"
-  },
-  {
-    "bang": "!wikihow",
-    "name": "wikiHow article ID",
-    "url": "https://www.wikihow.com/wikiHowTo?search=$1",
-    "id": "http://www.wikidata.org/entity/P13795",
-    "label": "wikiHow article ID"
   },
   {
     "bang": "!techpowerup",
@@ -6853,13 +6756,6 @@
     "label": "New York Post"
   },
   {
-    "bang": "!wikibooks",
-    "name": "Bangla Wikibooks",
-    "url": "https://bn.wikibooks.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q30535076",
-    "label": "Bangla Wikibooks"
-  },
-  {
     "bang": "!ipni",
     "name": "botanist author abbreviation",
     "url": "https://ipni.org/?q=author surname%3A$1",
@@ -6914,13 +6810,6 @@
     "url": "https://www.uta-net.com/search/?target=art&type=in&keyword=$1",
     "id": "http://www.wikidata.org/entity/P9183",
     "label": "Uta-Net artist ID"
-  },
-  {
-    "bang": "!gbl",
-    "name": "Mizuumi Wiki ID",
-    "url": "https://wiki.gbl.gg/index.php?search=$1&title=Special:Search&go=Go",
-    "id": "http://www.wikidata.org/entity/P13694",
-    "label": "Mizuumi Wiki ID"
   },
   {
     "bang": "!cero",
@@ -7007,13 +6896,6 @@
     "label": "Reta Vortaro ID"
   },
   {
-    "bang": "!katlas",
-    "name": "Knot Atlas ID",
-    "url": "http://katlas.org/w/index.php?search=$1&fulltext=Search&title=Special%3ASearch",
-    "id": "http://www.wikidata.org/entity/P8426",
-    "label": "Knot Atlas ID"
-  },
-  {
     "bang": "!anilist",
     "name": "AniList anime ID",
     "url": "https://anilist.co/search/anime?search=$1",
@@ -7047,13 +6929,6 @@
     "url": "https://astrogen.aas.org/front/searchresults.php?name=$1",
     "id": "http://www.wikidata.org/entity/P8880",
     "label": "AstroGen ID"
-  },
-  {
-    "bang": "!allthetropes",
-    "name": "All the Tropes article ID",
-    "url": "https://allthetropes.org/w/index.php?search=$1&title=Special%3ASearch&profile=advanced&fulltext=1&ns0=1",
-    "id": "http://www.wikidata.org/entity/P8895",
-    "label": "All the Tropes article ID"
   },
   {
     "bang": "!royalsociety",
@@ -7294,13 +7169,6 @@
     "label": "Franciscan Center of Christian Oriental Studies ID"
   },
   {
-    "bang": "!scholarpedia",
-    "name": "Scholarpedia article ID",
-    "url": "http://www.scholarpedia.org/w/index.php?search=$1&title=Special%3ASearch",
-    "id": "http://www.wikidata.org/entity/P9526",
-    "label": "Scholarpedia article ID"
-  },
-  {
     "bang": "!cinemaitaliano",
     "name": "Cinemaitaliano person ID",
     "url": "https://cinemaitaliano.info/ricercapersonaggio.php?tipo=titolo&mode=personaggio&search=$1",
@@ -7371,20 +7239,6 @@
     "label": "Canada Business Number"
   },
   {
-    "bang": "!wikibase",
-    "name": "Wikibase World",
-    "url": "https://wikibase.world/w/index.php?search=$1&title=Special%3ASearch&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P11914",
-    "label": "Wikibase World ID"
-  },
-  {
-    "bang": "!openstreetmap",
-    "name": "OpenStreetMap tag",
-    "url": "https://wiki.openstreetmap.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q18635431",
-    "label": "OpenStreetMap Wiki"
-  },
-  {
     "bang": "!steampowered",
     "name": "Steam application ID",
     "url": "https://store.steampowered.com/search/?term=$1",
@@ -7427,32 +7281,11 @@
     "label": "Classic Adventures Solution Archive game ID"
   },
   {
-    "bang": "!aaroads",
-    "name": "AARoads Wiki article ID",
-    "url": "https://wiki.aaroads.com/w/index.php?search=$1&title=Special%3ASearch&profile=default&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P12052",
-    "label": "AARoads Wiki article ID"
-  },
-  {
-    "bang": "!wikirby",
-    "name": "WiKirby ID",
-    "url": "https://wikirby.com/w/index.php?title=Special%3ASearch&search=$1&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P11617",
-    "label": "WiKirby ID"
-  },
-  {
     "bang": "!tasvideos",
     "name": "TASVideos game ID",
     "url": "https://tasvideos.org/Search/Advanced?SearchTerms=$1&GameSearch=true&GameSearch=false&PageSearch=false&TopicSearch=false&PostSearch=false",
     "id": "http://www.wikidata.org/entity/P11701",
     "label": "TASVideos game ID"
-  },
-  {
-    "bang": "!teamfortress",
-    "name": "Team Fortress Wiki ID",
-    "url": "https://wiki.teamfortress.com/w/index.php?search=$1&title=Special%3ASearch&profile=advanced&fulltext=1&ns0=1",
-    "id": "http://www.wikidata.org/entity/P11714",
-    "label": "Team Fortress Wiki ID"
   },
   {
     "bang": "!cessda",
@@ -7474,13 +7307,6 @@
     "url": "https://rumble.com/search/channel?q=$1",
     "id": "http://www.wikidata.org/entity/P11962",
     "label": "Rumble channel"
-  },
-  {
-    "bang": "!tolkiengateway",
-    "name": "Tolkien Gateway ID",
-    "url": "https://tolkiengateway.net/w/index.php?search=$1&title=Special%3ASearch&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P11935",
-    "label": "Tolkien Gateway ID"
   },
   {
     "bang": "!virksommeord",
@@ -7532,13 +7358,6 @@
     "label": "Star Citizen Tools Wiki ID"
   },
   {
-    "bang": "!rpcs3",
-    "name": "RPCS3 Wiki ID",
-    "url": "https://wiki.rpcs3.net/index.php?search=$1&title=Special%3ASearch&profile=default&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P12230",
-    "label": "RPCS3 Wiki ID"
-  },
-  {
     "bang": "!sfodb",
     "name": "SixtyFour Originals DataBase game ID",
     "url": "https://sfodb.com/index.php?searchfor=p&searchtype=l&search=$1&page=browse&function=search",
@@ -7551,13 +7370,6 @@
     "url": "https://rpgwatch.com/games.html?searchgame=$1",
     "id": "http://www.wikidata.org/entity/P12249",
     "label": "RPGWatch game ID"
-  },
-  {
-    "bang": "!theportalwiki",
-    "name": "Portal Wiki ID",
-    "url": "https://theportalwiki.com/w/index.php?search=$1&title=Special:Search&fulltext=1",
-    "id": "http://www.wikidata.org/entity/P12543",
-    "label": "Portal Wiki ID"
   },
   {
     "bang": "!trakt",
@@ -7665,13 +7477,6 @@
     "label": "TuneIn Podcasts show ID"
   },
   {
-    "bang": "!rationalwiki",
-    "name": "RationalWiki ID",
-    "url": "https://rationalwiki.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q6961180",
-    "label": "RationalWiki"
-  },
-  {
     "bang": "!vortaro",
     "name": "PIV Online ID",
     "url": "https://vortaro.net/#$1_kd",
@@ -7735,13 +7540,6 @@
     "label": "RetroAchievements game ID"
   },
   {
-    "bang": "!gentoo",
-    "name": "Gentoo Wiki article",
-    "url": "https://wiki.gentoo.org/index.php?search=$1&title=Special:Search&profile=advanced&fulltext=1&ns0=1",
-    "id": "http://www.wikidata.org/entity/P12695",
-    "label": "Gentoo Wiki article"
-  },
-  {
     "bang": "!dogpile",
     "name": "Dogpile",
     "url": "http://www.dogpile.com/search/web?fcoid=417&fcop=topnav&fpid=27&om_nextpage=True&q=$1&ql=&topSearchSubmit.x=0&topSearchSubmit.y=0",
@@ -7768,13 +7566,6 @@
     "url": "https://www.deviantart.com/?q=$1",
     "id": "http://www.wikidata.org/entity/Q46523",
     "label": "DeviantArt"
-  },
-  {
-    "bang": "!bulbagarden",
-    "name": "Bulbapedia",
-    "url": "https://bulbapedia.bulbagarden.net/w/index.php?title=Special%3ASearch&search=$1&go=Go",
-    "id": "http://www.wikidata.org/entity/Q41884312",
-    "label": "Bulbapedia"
   },
   {
     "bang": "!alriyadh",
@@ -7903,32 +7694,11 @@
     "label": "Michigan Legislative Bio ID"
   },
   {
-    "bang": "!huenenberg-pedia",
-    "name": "HüPedia",
-    "url": "https://www.huenenberg-pedia.ch/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q129159981",
-    "label": "HüPedia"
-  },
-  {
-    "bang": "!gem",
-    "name": "Global Energy Monitor Wiki",
-    "url": "https://www.gem.wiki/w/index.php?title=Special:Search&search=$1",
-    "id": "http://www.wikidata.org/entity/Q132816216",
-    "label": "Global Energy Monitor Wiki"
-  },
-  {
     "bang": "!abmc",
     "name": "ABMC person ID",
     "url": "https://www.abmc.gov/database-search-results?field_first_name=&field_last_name=&service_number=&field_abmc_burial_unit=&field_place_of_entry=All&field_cemetery=All&field_cemetery2=All&field_branch_of_service=All&search_api_fulltext=$1&field_dod_day=All&field_dod_month=All&field_dod_year=&field_missing_status=All&items_per_page=10&sort_bef_combine=field_last_name_ASC",
     "id": "http://www.wikidata.org/entity/P5756",
     "label": "ABMC person ID"
-  },
-  {
-    "bang": "!oberpfalzwiki",
-    "name": "OberpfalzWiki",
-    "url": "https://www.oberpfalzwiki.de/w/index.php?search=$1&title=Spezial%3ASuche",
-    "id": "http://www.wikidata.org/entity/Q130283034",
-    "label": "OberpfalzWiki"
   },
   {
     "bang": "!thwiki",
@@ -7994,13 +7764,6 @@
     "label": "Looplens"
   },
   {
-    "bang": "!strinova",
-    "name": "Strinova Wiki",
-    "url": "https://strinova.wiki/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q131459914",
-    "label": "Strinova Wiki"
-  },
-  {
     "bang": "!bodymeasurements",
     "name": "BodyMeasurements.org Database",
     "url": "https://bodymeasurements.org/en/?term=$1",
@@ -8020,20 +7783,6 @@
     "url": "http://www.monumentsdememoire.fr/spip.php?page=trouver&formulaire_action=search&formulaire_action_args=cYHCSk9LDONUPhhc1Rn6B2aCnSQS3UX%2FFK%2B4nTYdysMWQw453Qm1kBYXkXjvL%2FUfOf4AlZ7zHu7IkG166IZPng6r6N9LJnRdekdx&csearch=$1",
     "id": "http://www.wikidata.org/entity/P8820",
     "label": "Monuments de mémoire ID"
-  },
-  {
-    "bang": "!dosbox",
-    "name": "DOSBoxWiki",
-    "url": "https://www.dosbox.com/wiki/index.php?title=Special%3ASearch&search=$1&go=Go",
-    "id": "http://www.wikidata.org/entity/Q131700116",
-    "label": "DOSBoxWiki"
-  },
-  {
-    "bang": "!rxy",
-    "name": "Enpedia",
-    "url": "https://enpedia.rxy.jp/w/index.php?search=$1&title=特別%3A検索&go=表示",
-    "id": "http://www.wikidata.org/entity/Q131736854",
-    "label": "Enpedia"
   },
   {
     "bang": "!uzh",
@@ -8057,25 +7806,11 @@
     "label": "Munzinger Pop ID"
   },
   {
-    "bang": "!wikisource",
-    "name": "Central Bikol Wikisource",
-    "url": "https://bcl.wikisource.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q131924193",
-    "label": "Central Bikol Wikisource"
-  },
-  {
     "bang": "!inducks",
     "name": "INDUCKS character ID",
     "url": "https://inducks.org/comp2.php?code=&keyw=&keywt=i&exactpg=&pg1=&pg2=&bro2=&bro3=&exactparts=&parts1=&parts2=&kind=0&rowsperpage=0&columnsperpage=0&hero=&xapp=$1&univ=&xa2=&creat=&creat2=&plot=&plot2=&writ=&writ2=&art=&art2=&ink=&ink2=&excludeCZ=on&excludeUseDifferentCode=on&pub1=&pub2=&ser=&xref=&mref=&xrefd=&repabb=&repabbc=al&reppub1=&reppub2=&repnum=&imgmode=0&vdesc2=on&vdesc=en&vau=on&vdc=on&vgy=on&vnz=on&vuk=on&vus=on&sort1=auto",
     "id": "http://www.wikidata.org/entity/P4479",
     "label": "INDUCKS character ID"
-  },
-  {
-    "bang": "!nonbinary",
-    "name": "Nonbinary Wiki",
-    "url": "https://nonbinary.wiki/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q132142958",
-    "label": "Nonbinary Wiki"
   },
   {
     "bang": "!nrk",
@@ -8169,13 +7904,6 @@
     "label": "45cat 7\" release ID"
   },
   {
-    "bang": "!namu",
-    "name": "Namuwiki ID",
-    "url": "https://namu.wiki/Search?q=$1",
-    "id": "http://www.wikidata.org/entity/P8885",
-    "label": "Namuwiki ID"
-  },
-  {
     "bang": "!restaurantguru",
     "name": "Restaurant Guru restaurant ID",
     "url": "https://t.restaurantguru.com/search/$1",
@@ -8251,13 +7979,6 @@
     "url": "https://philadelphiaencyclopedia.org/?s=$1",
     "id": "http://www.wikidata.org/entity/P9281",
     "label": "Encyclopedia of Greater Philadelphia ID"
-  },
-  {
-    "bang": "!strategywiki",
-    "name": "StrategyWiki ID",
-    "url": "https://strategywiki.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q101563426",
-    "label": "StrategyWiki"
   },
   {
     "bang": "!provenio",
@@ -8421,13 +8142,6 @@
     "label": "Que aprendemos hoy"
   },
   {
-    "bang": "!wikia",
-    "name": "Lostpedia",
-    "url": "https://lostpedia.wikia.com/wiki/Special:Search?query=$1",
-    "id": "http://www.wikidata.org/entity/Q568754",
-    "label": "Lostpedia"
-  },
-  {
     "bang": "!withgoogle",
     "name": "Google Code-In",
     "url": "https://codein.withgoogle.com/archive/search/?q=$1",
@@ -8440,13 +8154,6 @@
     "url": "https://buyee.jp/item/search/query/$1",
     "id": "http://www.wikidata.org/entity/Q55249694",
     "label": "Buyee"
-  },
-  {
-    "bang": "!wmflabs",
-    "name": "Wikibase Registry",
-    "url": "https://wikibase-registry.wmflabs.org/w/index.php?search=$1&title=Special%3ASearch&fulltext=1",
-    "id": "http://www.wikidata.org/entity/Q55339228",
-    "label": "Wikibase Registry"
   },
   {
     "bang": "!anisearch",
@@ -8580,13 +8287,6 @@
     "url": "https://reports.exodus-privacy.eu.org/en/reports/search/$1/",
     "id": "http://www.wikidata.org/entity/Q60348651",
     "label": "Exodus Privacy"
-  },
-  {
-    "bang": "!cpdl",
-    "name": "Choral Public Domain Library",
-    "url": "https://www.cpdl.org/wiki/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q519635",
-    "label": "Choral Public Domain Library"
   },
   {
     "bang": "!nic",
@@ -9296,13 +8996,6 @@
     "label": "Cameo"
   },
   {
-    "bang": "!speidermuseet",
-    "name": "Speiderhistorisk leksikon",
-    "url": "https://leksikon.speidermuseet.no/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q76301335",
-    "label": "Speiderhistorisk leksikon"
-  },
-  {
     "bang": "!bsky",
     "name": "Bluesky",
     "url": "https://bsky.app/search?q=$1",
@@ -9457,13 +9150,6 @@
     "label": "LOKI"
   },
   {
-    "bang": "!semantic-mediawiki",
-    "name": "Semantic-MediaWiki.org",
-    "url": "https://www.semantic-mediawiki.org/w/index.php?title=Special%3ASearch&search=$1&fulltext=1",
-    "id": "http://www.wikidata.org/entity/Q94578775",
-    "label": "Semantic-MediaWiki.org"
-  },
-  {
     "bang": "!ubi",
     "name": "Ubisoft Store",
     "url": "https://store.ubi.com/search?q=$1",
@@ -9497,13 +9183,6 @@
     "url": "https://www.konschtlexikon.mnaha.lu/search/-/SUPERDEFAULT%25253A%252528$1%252529+SUPERFULLTEXT%25253A%252528$1%252529+SUPERUGCTERMS%25253A%252528$1%252529+DEFAULT%25253A%252528$1%252529+FULLTEXT%25253A%252528$1%252529+NORMDATATERMS%25253A%252528$1%252529+UGCTERMS%25253A%252528$1%252529+CMS_TEXT_ALL%25253A%252528$1%252529/1/-/-/",
     "id": "http://www.wikidata.org/entity/P12804",
     "label": "MNAHA person ID"
-  },
-  {
-    "bang": "!stadtwiki",
-    "name": "Stadtwiki Karlsruhe",
-    "url": "https://ka.stadtwiki.net/w/index.php?title=Spezial%3ASuche&search=$1&fulltext=1",
-    "id": "http://www.wikidata.org/entity/Q875533",
-    "label": "Stadtwiki Karlsruhe"
   },
   {
     "bang": "!europlusmed",
@@ -9583,13 +9262,6 @@
     "label": "Maniadb artist ID"
   },
   {
-    "bang": "!sierrahelp",
-    "name": "Sierra Wiki article ID",
-    "url": "https://wiki.sierrahelp.com/index.php?go=Go&title=Special%3ASearch&search=$1",
-    "id": "http://www.wikidata.org/entity/P13610",
-    "label": "Sierra Wiki article ID"
-  },
-  {
     "bang": "!pasportaservo",
     "name": "Pasporta Servo",
     "url": "https://pasportaservo.org/esplori/$1",
@@ -9608,13 +9280,6 @@
     "name": "Super Mario Wiki",
     "url": "https://www.mariowiki.com/?search=$1",
     "id": "http://www.wikidata.org/entity/Q93262423",
-    "label": "Super Mario Wiki"
-  },
-  {
-    "bang": "!mariocastle",
-    "name": "Super Mario Wiki",
-    "url": "https://www.mariocastle.it/wiki/?search=$1",
-    "id": "http://www.wikidata.org/entity/Q93263573",
     "label": "Super Mario Wiki"
   },
   {
@@ -9681,13 +9346,6 @@
     "label": "Deaf Movie Database title ID"
   },
   {
-    "bang": "!fanlore",
-    "name": "Fanlore article ID",
-    "url": "https://fanlore.org/w/index.php?search=$1&title=Special%3ASearch&go=Go",
-    "id": "http://www.wikidata.org/entity/P13687",
-    "label": "Fanlore article ID"
-  },
-  {
     "bang": "!ukrbin",
     "name": "UkrBIN ID",
     "url": "https://ukrbin.com/search_taxon.php?taxon=$1&search_quick=on&search_all=on",
@@ -9728,13 +9386,6 @@
     "url": "https://www.democratfacts.org/updates/?fwp_search=$1",
     "id": "http://www.wikidata.org/entity/Q141348279",
     "label": "Democrat Facts"
-  },
-  {
-    "bang": "!hrwiki",
-    "name": "Homestar Runner Wiki",
-    "url": "http://www.hrwiki.org/w/index.php?title=Special%3ASearch&search=$1&fulltext=Search",
-    "id": "http://www.wikidata.org/entity/Q97666493",
-    "label": "Homestar Runner Wiki"
   },
   {
     "bang": "!24-7pressrelease",
@@ -10003,27 +9654,6 @@
     "label": "Spectator Index"
   },
   {
-    "bang": "!wetzipedia",
-    "name": "Wetzipedia",
-    "url": "https://www.wetzipedia.ch/w/index.php?title=Spezial%3ASuche&search=$1&fulltext=1",
-    "id": "http://www.wikidata.org/entity/Q96473741",
-    "label": "Wetzipedia"
-  },
-  {
-    "bang": "!chamapedia",
-    "name": "Chamapedia",
-    "url": "https://www.chamapedia.ch/w/index.php?search=$1&title=Spezial%3ASuche&fulltext=1",
-    "id": "http://www.wikidata.org/entity/Q96473909",
-    "label": "Chamapedia"
-  },
-  {
-    "bang": "!nookipedia",
-    "name": "Nookipedia",
-    "url": "https://nookipedia.com/w/index.php?search=$1&title=Special%3ASearch&go=Go",
-    "id": "http://www.wikidata.org/entity/Q96754852",
-    "label": "Nookipedia"
-  },
-  {
     "bang": "!wikizaglebie",
     "name": "WikiZaglebie",
     "url": "https://wikizaglebie.org/wiki/$1",
@@ -10232,13 +9862,6 @@
     "url": "https://www.truoosh.com/?s=",
     "id": "http://www.wikidata.org/entity/Q105488673",
     "label": "Truoosh"
-  },
-  {
-    "bang": "!hololive",
-    "name": "Hololive Fan Wiki",
-    "url": "https://hololive.wiki/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q105611950",
-    "label": "Hololive Fan Wiki"
   },
   {
     "bang": "!novusred",
@@ -10521,20 +10144,6 @@
     "label": "Transporter Classification database"
   },
   {
-    "bang": "!citizendium",
-    "name": "Citizendium",
-    "url": "https://en.citizendium.org/wiki?search=$1",
-    "id": "http://www.wikidata.org/entity/Q187801",
-    "label": "Citizendium"
-  },
-  {
-    "bang": "!klingon",
-    "name": "Klingon Language Wiki",
-    "url": "http://klingon.wiki/Fr/WebSearch?search=$1&scope=all&web=En&submit=Search",
-    "id": "http://www.wikidata.org/entity/Q122886642",
-    "label": "Klingon Language Wiki"
-  },
-  {
     "bang": "!inkr",
     "name": "INKR Comics",
     "url": "https://comics.inkr.com/search?q=$1",
@@ -10582,13 +10191,6 @@
     "url": "https://www.kudoboard.com/boards/$",
     "id": "http://www.wikidata.org/entity/Q122532367",
     "label": "Kudoboard"
-  },
-  {
-    "bang": "!wiiubrew",
-    "name": "WiiUBrew",
-    "url": "https://wiiubrew.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q122780152",
-    "label": "WiiUBrew"
   },
   {
     "bang": "!raddle",
@@ -10645,13 +10247,6 @@
     "url": "https://www.mbc.net/search-result/?q=$1",
     "id": "http://www.wikidata.org/entity/Q12182501",
     "label": "Mbc.net"
-  },
-  {
-    "bang": "!wikitravel",
-    "name": "Arabic Wikitravel",
-    "url": "https://wikitravel.org/wiki/ar/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q123412906",
-    "label": "Arabic Wikitravel"
   },
   {
     "bang": "!cnn",
@@ -10752,13 +10347,6 @@
     "label": "Newsru.com"
   },
   {
-    "bang": "!hollowknight",
-    "name": "Hollow Knight Wiki",
-    "url": "https://hollowknight.wiki/mw/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q123378943",
-    "label": "Hollow Knight Wiki"
-  },
-  {
     "bang": "!gramfile",
     "name": "Gramfile",
     "url": "https://gramfile.com/?s=$1",
@@ -10792,20 +10380,6 @@
     "url": "https://hanzii.net/search/chinese/$1",
     "id": "http://www.wikidata.org/entity/Q114819553",
     "label": "hanzii.net"
-  },
-  {
-    "bang": "!medievil",
-    "name": "Gallowpedia",
-    "url": "https://medievil.wiki/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q123408741",
-    "label": "Gallowpedia"
-  },
-  {
-    "bang": "!potsdam-wiki",
-    "name": "PotsdamWiki",
-    "url": "https://www.potsdam-wiki.de/w/index.php?title=Spezial%3ASuche&search=$1&fulltext=1",
-    "id": "http://www.wikidata.org/entity/Q121367045",
-    "label": "PotsdamWiki"
   },
   {
     "bang": "!uscurrency",
@@ -10864,13 +10438,6 @@
     "label": "Everything2"
   },
   {
-    "bang": "!hinwilpedia",
-    "name": "Hinwilpedia",
-    "url": "https://www.hinwilpedia.ch/w/index.php?title=Spezial%3ASuche&search=$1&fulltext=1",
-    "id": "http://www.wikidata.org/entity/Q136100536",
-    "label": "Hinwilpedia"
-  },
-  {
     "bang": "!uib",
     "name": "Bokmålsordboka",
     "url": "https://ordbok.uib.no/perl/ordbok.cgi?OPP=$1&ant_bokmaal=5&ant_nynorsk=5&bokmaal=+&ordbok=bokmaal",
@@ -10890,13 +10457,6 @@
     "url": "https://www.gpuzoo.com/cgi-bin/SearchModel.pl?GPU=$1&ACTION=+",
     "id": "http://www.wikidata.org/entity/Q136373834",
     "label": "CPU-World"
-  },
-  {
-    "bang": "!uncyclopedia",
-    "name": "Uncyclopedia",
-    "url": "https://en.uncyclopedia.co/wiki/Special:Search?query=$1",
-    "id": "http://www.wikidata.org/entity/Q17460",
-    "label": "Uncyclopedia"
   },
   {
     "bang": "!grokipedia",
@@ -10946,13 +10506,6 @@
     "url": "https://m.qidian.com/search?kw=$1",
     "id": "http://www.wikidata.org/entity/Q15912179",
     "label": "Qidian"
-  },
-  {
-    "bang": "!marjorie-wiki",
-    "name": "Marjorie-Wiki",
-    "url": "https://marjorie-wiki.de/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q14971823",
-    "label": "Marjorie-Wiki"
   },
   {
     "bang": "!weightmans",
@@ -11067,13 +10620,6 @@
     "label": "Fantastic Fiction author ID"
   },
   {
-    "bang": "!mediawiki",
-    "name": "MediaWiki.org",
-    "url": "https://www.mediawiki.org/w/index.php?search=$1&fulltext=1",
-    "id": "http://www.wikidata.org/entity/Q15633578",
-    "label": "MediaWiki.org"
-  },
-  {
     "bang": "!hofstra",
     "name": "Hofstra University",
     "url": "https://www.hofstra.edu/search/?q=$1",
@@ -11121,13 +10667,6 @@
     "url": "https://www.xiami.com/list?scene=search&type=song&query={\"searchKey\":\"$1\"}",
     "id": "http://www.wikidata.org/entity/Q15927896",
     "label": "Xiami Music"
-  },
-  {
-    "bang": "!buergerwiki",
-    "name": "Q135936992",
-    "url": "https://www.buergerwiki.net/w/index.php?title=Spezial%3ASuche&search=$1&go=Seite",
-    "id": "http://www.wikidata.org/entity/Q135936992",
-    "label": "Q135936992"
   },
   {
     "bang": "!tubitv",
@@ -11487,13 +11026,6 @@
     "label": "Woordenlijst.org"
   },
   {
-    "bang": "!crashbandicootwiki",
-    "name": "Bandipedia",
-    "url": "https://crashbandicootwiki.com/w/index.php?title=Special%3ASearch&search=$1&go=Go",
-    "id": "http://www.wikidata.org/entity/Q123469910",
-    "label": "Bandipedia"
-  },
-  {
     "bang": "!computerlanguage",
     "name": "ComputerLanguage.com",
     "url": "https://www.computerlanguage.com/results.php?definition=$1",
@@ -11527,20 +11059,6 @@
     "url": "https://www.brazzers.com/pornstars?q=$1&source=p1",
     "id": "http://www.wikidata.org/entity/P12478",
     "label": "Brazzers performer ID"
-  },
-  {
-    "bang": "!splatoonwiki",
-    "name": "Inkipedia",
-    "url": "https://splatoonwiki.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q123482237",
-    "label": "Inkipedia"
-  },
-  {
-    "bang": "!wikivoyage",
-    "name": "Shan Wikivoyage",
-    "url": "https://shn.wikivoyage.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q111345933",
-    "label": "Shan Wikivoyage"
   },
   {
     "bang": "!playboyclub",
@@ -11793,13 +11311,6 @@
     "label": "Interface In Game"
   },
   {
-    "bang": "!cyclowiki",
-    "name": "Cyclopedia",
-    "url": "http://cyclowiki.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q103930216",
-    "label": "Cyclopedia"
-  },
-  {
     "bang": "!thetoptens",
     "name": "The Top Tens ID",
     "url": "https://www.thetoptens.com/search/?q=$1",
@@ -11884,13 +11395,6 @@
     "label": "GetPodcast"
   },
   {
-    "bang": "!wikifunctions",
-    "name": "Wikifunctions",
-    "url": "https://www.wikifunctions.org/w/index.php?search=$1",
-    "id": "http://www.wikidata.org/entity/Q104587954",
-    "label": "Wikifunctions"
-  },
-  {
     "bang": "!ekoru",
     "name": "Ekoru",
     "url": "https://www.ekoru.org/?q=$1",
@@ -11917,13 +11421,6 @@
     "url": "https://emojiwrap.com/search?q=$1",
     "id": "http://www.wikidata.org/entity/Q101084418",
     "label": "Emoji Wrap"
-  },
-  {
-    "bang": "!wikipediaquality",
-    "name": "Wikipedia Quality",
-    "url": "https://wikipediaquality.com/wiki/Special:Search?query=$1",
-    "id": "http://www.wikidata.org/entity/Q101093648",
-    "label": "Wikipedia Quality"
   },
   {
     "bang": "!biographies",
