@@ -3,152 +3,1260 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bang Search</title>
-<meta name="description" content="A static DuckDuckGo-style bang search page.">
+
+<title>bang! — Search</title>
+
+<meta
+  name="description"
+  content="A fast DuckDuckGo-style bang search engine."
+>
+
+<meta name="theme-color" content="#de5833">
+
 <style>
-:root{--bg:#fff;--fg:#222;--muted:#6b7280;--line:#e5e7eb;--accent:#de5833;--accent2:#c74624}
-*{box-sizing:border-box}html,body{height:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-main{min-height:100%;display:grid;place-items:center;padding:40px 18px}
-.wrap{width:min(760px,100%);text-align:center;margin-top:-8vh}
-.logo{font-size:clamp(46px,9vw,76px);font-weight:800;letter-spacing:-.06em;color:var(--accent);margin:0 0 26px}
-.logo span{color:#222}
-.search{display:flex;align-items:center;background:#fff;border:1px solid #cfd3d7;border-radius:8px;box-shadow:0 2px 7px #00000012;padding:5px 7px 5px 16px;transition:.15s}
-.search:focus-within{border-color:#aaa;box-shadow:0 4px 14px #00000018}
-input{flex:1;min-width:0;border:0;outline:0;font-size:18px;padding:11px 4px;color:var(--fg);background:transparent}
-button{border:0;border-radius:5px;background:var(--accent);color:#fff;font-weight:700;padding:11px 18px;cursor:pointer}
-button:hover{background:var(--accent2)}
-.hint{margin:18px 0 0;color:var(--muted);font-size:14px}
-.hint code{background:#f3f4f6;border-radius:4px;padding:2px 5px;color:#444}
-.results{margin-top:25px;text-align:left}
-.card{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 16px;border:1px solid var(--line);border-radius:8px;margin-top:9px;background:#fff;cursor:pointer}
-.card:hover{box-shadow:0 3px 12px #0000000f}
-.card strong{display:block}.card small{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:570px}
-.badge{font:600 13px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent);white-space:nowrap}
-.empty{color:var(--muted);padding:18px}
-footer{position:fixed;bottom:15px;left:0;right:0;text-align:center;color:#9ca3af;font-size:12px}
-@media(max-width:560px){main{padding:28px 12px}.wrap{margin-top:-4vh}.search{padding-left:12px}button{padding:10px 13px}.hint{font-size:13px}.card small{max-width:70vw}}
-</style>
-</head>
-<body>
-<main>
-<section class="wrap">
-<h1 class="logo">bang<span>!</span></h1>
-<form class="search" id="searchForm" autocomplete="off">
-<input id="query" aria-label="Search" placeholder="Search with a bang, e.g. !w kittens" autofocus disabled>
-<button type="submit" disabled>Search</button>
-</form>
-<p class="hint">Use <code>!bang query</code> to jump to a site, or type to discover bangs.</p>
-<div class="results" id="results" aria-live="polite"></div>
-</section>
-</main>
-<footer>Static HTML + JavaScript · No backend</footer>
-
-<script>
-let BANGS = [];
-
-async function loadBangs() {
-  try {
-    const response = await fetch("./bangs.json", { cache: "no-cache" });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-    BANGS = await response.json();
-
-    document.getElementById("query").disabled = false;
-    document.querySelector("#searchForm button").disabled = false;
-  } catch (error) {
-    console.error("Failed to load bangs.json:", error);
-    document.getElementById("results").innerHTML =
-      '<div class="empty">Could not load bangs.json. Make sure bangs.json is next to this HTML file and serve the folder over HTTP.</div>';
-  }
-}const input = document.getElementById("query");
-const form = document.getElementById("searchForm");
-const results = document.getElementById("results");
-
-const esc = s => s.replace(/[&<>"']/g, c => ({
-  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
-}[c]));
-
-function findBang(token){
-  const t = token.toLowerCase();
-  return BANGS.find(b => b.bang.toLowerCase() === t);
+:root{
+  --bg:#fafafa;
+  --surface:#fff;
+  --fg:#202124;
+  --muted:#737780;
+  --line:#e3e5e8;
+  --accent:#de5833;
+  --accent-hover:#c94b29;
+  --shadow:0 8px 30px rgba(0,0,0,.07);
+  --shadow-hover:0 10px 30px rgba(0,0,0,.11);
 }
 
-function resolveTemplate(template, query) {
-  const encoded = encodeURIComponent(query.trim());
+*{
+  box-sizing:border-box;
+}
 
-  // Bang data uses $1 as the search-query placeholder.
-  // Replace the literal token before navigating.
+html,
+body{
+  min-height:100%;
+}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(
+      circle at 50% -10%,
+      #fff 0,
+      #fafafa 45%,
+      #f6f6f6 100%
+    );
+  color:var(--fg);
+  font:16px/1.5 system-ui,-apple-system,
+    BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+main{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:32px 18px 90px;
+}
+
+.wrap{
+  width:min(760px,100%);
+  text-align:center;
+  margin-top:-6vh;
+}
+
+
+/* =========================
+   Logo
+========================= */
+
+.logo{
+  margin:0 0 28px;
+  font-size:clamp(54px,10vw,82px);
+  line-height:1;
+  font-weight:850;
+  letter-spacing:-.075em;
+  color:var(--accent);
+  user-select:none;
+}
+
+.logo span{
+  color:var(--fg);
+}
+
+
+/* =========================
+   Search box
+========================= */
+
+.search{
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  width:100%;
+  padding:7px 7px 7px 18px;
+
+  background:rgba(255,255,255,.96);
+  border:1px solid #d4d7db;
+  border-radius:13px;
+
+  box-shadow:var(--shadow);
+
+  transition:
+    border-color .15s ease,
+    box-shadow .15s ease,
+    transform .15s ease;
+}
+
+.search:focus-within{
+  border-color:#b8bcc1;
+  box-shadow:
+    0 12px 36px rgba(0,0,0,.11);
+  transform:translateY(-1px);
+}
+
+.search-icon{
+  flex:none;
+  width:20px;
+  height:20px;
+  color:#8b9097;
+}
+
+input{
+  flex:1;
+  min-width:0;
+
+  border:0;
+  outline:0;
+
+  background:transparent;
+  color:var(--fg);
+
+  font:inherit;
+  font-size:18px;
+
+  padding:12px 2px;
+}
+
+input::placeholder{
+  color:#999da4;
+}
+
+button{
+  flex:none;
+
+  border:0;
+  border-radius:9px;
+
+  background:var(--accent);
+  color:#fff;
+
+  font-weight:750;
+  font-size:15px;
+
+  padding:12px 20px;
+
+  cursor:pointer;
+
+  transition:
+    background .15s ease,
+    transform .1s ease;
+}
+
+button:hover{
+  background:var(--accent-hover);
+}
+
+button:active{
+  transform:scale(.97);
+}
+
+button:disabled{
+  opacity:.5;
+  cursor:not-allowed;
+}
+
+
+/* =========================
+   Hint
+========================= */
+
+.hint{
+  margin:18px 0 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.hint code{
+  display:inline-block;
+
+  background:#eeeef0;
+  color:#44474d;
+
+  border-radius:5px;
+
+  padding:2px 6px;
+
+  font:500 13px
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+}
+
+
+/* =========================
+   Browser search setup
+========================= */
+
+.browser-setup{
+  margin:26px auto 0;
+
+  padding:17px 18px;
+
+  max-width:680px;
+
+  text-align:left;
+
+  background:rgba(255,255,255,.9);
+
+  border:1px solid var(--line);
+  border-radius:11px;
+
+  box-shadow:0 4px 18px rgba(0,0,0,.04);
+}
+
+.browser-setup-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.browser-setup strong{
+  font-size:14px;
+}
+
+.browser-setup p{
+  margin:4px 0;
+
+  color:var(--muted);
+  font-size:13px;
+}
+
+.search-url-row{
+  display:flex;
+  gap:7px;
+  align-items:stretch;
+
+  margin:11px 0 7px;
+}
+
+.search-url{
+  flex:1;
+  min-width:0;
+
+  display:block;
+
+  padding:9px 11px;
+
+  overflow-x:auto;
+  white-space:nowrap;
+
+  border-radius:7px;
+
+  background:#f4f4f5;
+
+  color:var(--accent);
+
+  font:500 12px
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+}
+
+.copy-button{
+  padding:8px 12px;
+
+  border-radius:7px;
+
+  background:#ececee;
+  color:#44474d;
+
+  font-size:12px;
+  font-weight:700;
+}
+
+.copy-button:hover{
+  background:#e2e3e5;
+}
+
+.setup-hint{
+  font-size:12px !important;
+}
+
+kbd{
+  display:inline-block;
+
+  padding:2px 5px;
+
+  border:1px solid #d8dadd;
+  border-bottom-width:2px;
+
+  border-radius:4px;
+
+  background:#fafafa;
+
+  font:600 11px
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+}
+
+
+/* =========================
+   Suggestions
+========================= */
+
+.results{
+  margin-top:25px;
+  text-align:left;
+}
+
+.results-header{
+  margin:0 0 8px 4px;
+
+  color:#8a8e95;
+
+  font-size:12px;
+  font-weight:700;
+
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.card{
+  display:flex;
+  align-items:center;
+
+  gap:16px;
+
+  width:100%;
+
+  padding:14px 16px;
+  margin-top:8px;
+
+  background:var(--surface);
+
+  border:1px solid var(--line);
+  border-radius:10px;
+
+  cursor:pointer;
+
+  transition:
+    box-shadow .15s ease,
+    border-color .15s ease,
+    transform .15s ease;
+}
+
+.card:hover{
+  border-color:#d5d8dc;
+
+  box-shadow:var(--shadow-hover);
+
+  transform:translateY(-1px);
+}
+
+.card:focus{
+  outline:2px solid rgba(222,88,51,.35);
+  outline-offset:2px;
+}
+
+.card-content{
+  min-width:0;
+  flex:1;
+}
+
+.card strong{
+  display:block;
+
+  font-size:15px;
+  font-weight:700;
+}
+
+.card small{
+  display:block;
+
+  margin-top:2px;
+
+  color:var(--muted);
+
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+
+  font-size:13px;
+}
+
+.badge{
+  flex:none;
+
+  color:var(--accent);
+
+  font:650 13px
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+
+  background:#fff2ed;
+
+  border-radius:6px;
+
+  padding:5px 8px;
+}
+
+.empty{
+  padding:18px;
+
+  color:var(--muted);
+
+  text-align:center;
+
+  font-size:14px;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+  position:fixed;
+
+  bottom:16px;
+  left:0;
+  right:0;
+
+  text-align:center;
+
+  color:#a0a3a8;
+
+  font-size:12px;
+}
+
+.footer-key{
+  display:inline-block;
+
+  margin:0 3px;
+
+  padding:1px 5px;
+
+  border:1px solid #dddfe2;
+  border-radius:4px;
+
+  background:#fff;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media(max-width:560px){
+
+  main{
+    padding:28px 12px 75px;
+  }
+
+  .wrap{
+    margin-top:-3vh;
+  }
+
+  .logo{
+    margin-bottom:22px;
+  }
+
+  .search{
+    padding-left:13px;
+    border-radius:11px;
+  }
+
+  .search-icon{
+    display:none;
+  }
+
+  input{
+    font-size:16px;
+  }
+
+  button{
+    padding:11px 14px;
+  }
+
+  .hint{
+    font-size:13px;
+  }
+
+  .browser-setup{
+    padding:15px;
+  }
+
+  .search-url-row{
+    flex-direction:column;
+  }
+
+  .copy-button{
+    width:100%;
+  }
+
+  .card{
+    padding:13px;
+  }
+
+  .badge{
+    font-size:12px;
+  }
+}
+
+
+/* =========================
+   Reduced motion
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+    transition:none !important;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<main>
+
+<section class="wrap">
+
+  <!-- Logo -->
+
+  <h1 class="logo">
+    bang<span>!</span>
+  </h1>
+
+
+  <!-- Search -->
+
+  <form
+    class="search"
+    id="searchForm"
+    autocomplete="off"
+  >
+
+    <svg
+      class="search-icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      aria-hidden="true"
+    >
+      <circle cx="11" cy="11" r="7"></circle>
+      <path d="m20 20-4-4"></path>
+    </svg>
+
+
+    <input
+      id="query"
+      aria-label="Search"
+      placeholder="Search with a bang, e.g. !w kittens"
+      autocomplete="off"
+      autocapitalize="off"
+      spellcheck="false"
+      disabled
+    >
+
+
+    <button
+      type="submit"
+      id="searchButton"
+      disabled
+    >
+      Search
+    </button>
+
+  </form>
+
+
+  <!-- Hint -->
+
+  <p class="hint">
+    Use <code>!bang query</code> to jump to a site
+    · Press <code>/</code> to focus
+  </p>
+
+
+  <!-- Browser search engine setup -->
+
+  <div class="browser-setup">
+
+    <div class="browser-setup-title">
+      <strong>
+        Use bang! from your browser
+      </strong>
+    </div>
+
+
+    <p>
+      Add this as a custom search engine in your browser:
+    </p>
+
+
+    <div class="search-url-row">
+
+      <code
+        class="search-url"
+        id="searchEngineUrl"
+      >
+        Loading search URL…
+      </code>
+
+
+      <button
+        type="button"
+        class="copy-button"
+        id="copyButton"
+      >
+        Copy
+      </button>
+
+    </div>
+
+
+    <p class="setup-hint">
+      Set the shortcut to
+      <kbd>!</kbd>
+      and use it from your browser's address bar.
+    </p>
+
+  </div>
+
+
+  <!-- Bang suggestions -->
+
+  <div
+    class="results"
+    id="results"
+    aria-live="polite"
+  ></div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  Static HTML + JavaScript
+
+  ·
+
+  <span class="footer-key">/</span>
+  focus
+
+  ·
+
+  <span class="footer-key">Enter</span>
+  search
+
+</footer>
+
+
+<script>
+
+let BANGS = [];
+
+
+const input =
+  document.getElementById("query");
+
+const form =
+  document.getElementById("searchForm");
+
+const results =
+  document.getElementById("results");
+
+const searchButton =
+  document.getElementById("searchButton");
+
+const searchEngineUrl =
+  document.getElementById("searchEngineUrl");
+
+const copyButton =
+  document.getElementById("copyButton");
+
+
+/* =========================
+   Escape HTML
+========================= */
+
+const esc = value =>
+  String(value).replace(
+    /[&<>"']/g,
+    char => ({
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#39;"
+    }[char])
+  );
+
+
+/* =========================
+   Find bang
+========================= */
+
+function findBang(token){
+
+  const normalized =
+    token.toLowerCase();
+
+  return BANGS.find(
+    bang =>
+      bang.bang.toLowerCase() === normalized
+  );
+}
+
+
+/* =========================
+   Resolve bang URL
+========================= */
+
+function resolveTemplate(
+  template,
+  query
+){
+
+  const encoded =
+    encodeURIComponent(
+      query.trim()
+    );
+
   return String(template)
     .replace(/\$1/g, encoded)
     .replace(/\$2/g, encoded)
     .replace(/%s/gi, encoded)
-    .replace(/\{\{query\}\}/gi, encoded)
-    .replace(/\{query\}/gi, encoded);
+    .replace(
+      /\{\{query\}\}/gi,
+      encoded
+    )
+    .replace(
+      /\{query\}/gi,
+      encoded
+    );
 }
+
+
+/* =========================
+   Search
+========================= */
 
 function search(raw){
-  const q = raw.trim();
-  if(!q) return;
 
-  const parts = q.split(/\s+/);
-  const bang = parts[0].startsWith("!") ? findBang(parts[0]) : null;
+  const q =
+    raw.trim();
 
-  if(bang){
-    const searchTerms = parts.slice(1).join(" ");
-    const url = resolveTemplate(bang.url, searchTerms);
-
-    if (/\$(?:1|2)|%s|\{\{?query\}?\}/i.test(url)) {
-      console.error("Unresolved bang placeholder:", bang, url);
-      results.innerHTML =
-        '<div class="empty">This bang has an unsupported URL template.</div>';
-      return;
-    }
-
-    if(/^https?:\/\//i.test(url)){
-      location.href=url;
-      return;
-    }
-  }
-
-  // Ordinary searches use DuckDuckGo.
-  location.href = "https://duckduckgo.com/?q=" + encodeURIComponent(q);
-}
-
-function suggest(value){
-  const q = value.trim().toLowerCase();
-  if(q.length < 2){ results.innerHTML = ""; return; }
-
-  const first = q.split(/\s+/)[0];
-  const matches = BANGS.filter(b =>
-    b.bang.toLowerCase().startsWith(first) ||
-    b.name.toLowerCase().includes(q)
-  ).slice(0, 8);
-
-  if(!matches.length){
-    results.innerHTML = '<div class="empty">No matching bangs found.</div>';
+  if(!q){
     return;
   }
 
-  results.innerHTML = matches.map(b => `
-    <div class="card" data-bang="${esc(b.bang)}">
-      <div><strong>${esc(b.name)}</strong><small>${esc(b.url)}</small></div>
-      <div class="badge">${esc(b.bang)}</div>
-    </div>
-  `).join("");
 
-  results.querySelectorAll(".card").forEach(card => {
-    card.addEventListener("click", () => {
-      input.value = card.dataset.bang + " ";
-      input.focus();
-    });
-  });
+  const parts =
+    q.split(/\s+/);
+
+
+  const bang =
+    parts[0].startsWith("!")
+      ? findBang(parts[0])
+      : null;
+
+
+  /*
+   * Bang search.
+   *
+   * Example:
+   *
+   * !w kittens
+   */
+
+  if(bang){
+
+    const searchTerms =
+      parts
+        .slice(1)
+        .join(" ");
+
+
+    const url =
+      resolveTemplate(
+        bang.url,
+        searchTerms
+      );
+
+
+    /*
+     * Check for unresolved placeholders.
+     */
+
+    if(
+      /\$(?:1|2)|%s|\{\{?query\}?\}/i
+        .test(url)
+    ){
+
+      console.error(
+        "Unresolved bang placeholder:",
+        bang,
+        url
+      );
+
+
+      results.innerHTML =
+        '<div class="empty">' +
+        'This bang has an unsupported URL template.' +
+        '</div>';
+
+      return;
+    }
+
+
+    /*
+     * Only navigate to HTTP/HTTPS URLs.
+     */
+
+    if(
+      /^https?:\/\//i.test(url)
+    ){
+
+      window.location.href =
+        url;
+
+      return;
+    }
+  }
+
+
+  /*
+   * Ordinary searches go to DuckDuckGo.
+   */
+
+  window.location.href =
+    "https://duckduckgo.com/?q=" +
+    encodeURIComponent(q);
 }
 
-form.addEventListener("submit", e => { e.preventDefault(); search(input.value); });
-input.addEventListener("input", e => suggest(e.target.value));
+
+/* =========================
+   Suggestions
+========================= */
+
+function suggest(value){
+
+  const q =
+    value.trim().toLowerCase();
+
+
+  if(q.length < 2){
+
+    results.innerHTML = "";
+
+    return;
+  }
+
+
+  const first =
+    q.split(/\s+/)[0];
+
+
+  const matches =
+    BANGS
+      .filter(bang =>
+        bang.bang
+          .toLowerCase()
+          .startsWith(first) ||
+
+        bang.name
+          .toLowerCase()
+          .includes(q)
+      )
+      .slice(0,8);
+
+
+  if(!matches.length){
+
+    results.innerHTML =
+      '<div class="empty">' +
+      'No matching bangs found.' +
+      '</div>';
+
+    return;
+  }
+
+
+  results.innerHTML =
+    '<div class="results-header">' +
+    'Bangs' +
+    '</div>' +
+
+    matches.map(bang => `
+
+      <div
+        class="card"
+        data-bang="${esc(bang.bang)}"
+        tabindex="0"
+        role="button"
+      >
+
+        <div class="card-content">
+
+          <strong>
+            ${esc(bang.name)}
+          </strong>
+
+          <small>
+            ${esc(bang.url)}
+          </small>
+
+        </div>
+
+
+        <div class="badge">
+          ${esc(bang.bang)}
+        </div>
+
+      </div>
+
+    `).join("");
+
+
+  results
+    .querySelectorAll(".card")
+    .forEach(card => {
+
+      const select = () => {
+
+        input.value =
+          card.dataset.bang + " ";
+
+        input.focus();
+
+        suggest(
+          input.value
+        );
+      };
+
+
+      card.addEventListener(
+        "click",
+        select
+      );
+
+
+      card.addEventListener(
+        "keydown",
+        event => {
+
+          if(
+            event.key === "Enter" ||
+            event.key === " "
+          ){
+
+            event.preventDefault();
+
+            select();
+          }
+
+        }
+      );
+
+    });
+}
+
+
+/* =========================
+   Browser search URL
+========================= */
+
+function getSearchEngineUrl(){
+
+  /*
+   * Keep the current origin and path.
+   *
+   * Example:
+   *
+   * https://example.com/
+   *
+   * becomes:
+   *
+   * https://example.com/?q=%s
+   */
+
+  return (
+    window.location.origin +
+    window.location.pathname +
+    "?q=%s"
+  );
+}
+
+
+function showSearchEngineUrl(){
+
+  searchEngineUrl.textContent =
+    getSearchEngineUrl();
+}
+
+
+/* =========================
+   Copy search URL
+========================= */
+
+copyButton.addEventListener(
+  "click",
+  async () => {
+
+    const url =
+      getSearchEngineUrl();
+
+
+    try{
+
+      await navigator.clipboard.writeText(
+        url
+      );
+
+
+      const original =
+        copyButton.textContent;
+
+
+      copyButton.textContent =
+        "Copied!";
+
+
+      setTimeout(() => {
+
+        copyButton.textContent =
+          original;
+
+      },1500);
+
+
+    }catch(error){
+
+      /*
+       * Fallback for browsers that don't
+       * allow navigator.clipboard.
+       */
+
+      const textarea =
+        document.createElement("textarea");
+
+
+      textarea.value = url;
+
+      document.body.appendChild(
+        textarea
+      );
+
+      textarea.select();
+
+      document.execCommand("copy");
+
+      textarea.remove();
+
+
+      copyButton.textContent =
+        "Copied!";
+
+
+      setTimeout(() => {
+
+        copyButton.textContent =
+          "Copy";
+
+      },1500);
+    }
+  }
+);
+
+
+/* =========================
+   Form
+========================= */
+
+form.addEventListener(
+  "submit",
+  event => {
+
+    event.preventDefault();
+
+    search(input.value);
+
+  }
+);
+
+
+input.addEventListener(
+  "input",
+  event => {
+
+    suggest(
+      event.target.value
+    );
+
+  }
+);
+
+
+/* =========================
+   "/" focuses search
+========================= */
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if(
+      event.key === "/" &&
+      document.activeElement !== input &&
+      document.activeElement.tagName !== "TEXTAREA" &&
+      document.activeElement.tagName !== "INPUT"
+    ){
+
+      event.preventDefault();
+
+      input.focus();
+    }
+
+  }
+);
+
+
+/* =========================
+   Load bangs.json
+========================= */
+
+async function loadBangs(){
+
+  try{
+
+    const response =
+      await fetch(
+        "./bangs.json",
+        {
+          cache:"no-cache"
+        }
+      );
+
+
+    if(!response.ok){
+
+      throw new Error(
+        `HTTP ${response.status}`
+      );
+
+    }
+
+
+    BANGS =
+      await response.json();
+
+
+    /*
+     * Enable the search UI.
+     */
+
+    input.disabled = false;
+
+    searchButton.disabled = false;
+
+
+    /*
+     * Check whether the browser sent
+     * a search query through ?q=%s.
+     */
+
+    const params =
+      new URLSearchParams(
+        window.location.search
+      );
+
+
+    const urlQuery =
+      params.get("q");
+
+
+    if(urlQuery !== null){
+
+      input.value =
+        urlQuery;
+
+
+      /*
+       * Resolve the bang immediately.
+       *
+       * This is what makes the page work
+       * as a browser search engine.
+       */
+
+      search(urlQuery);
+
+      return;
+    }
+
+
+    input.focus();
+
+
+  }catch(error){
+
+    console.error(
+      "Failed to load bangs.json:",
+      error
+    );
+
+
+    results.innerHTML =
+      '<div class="empty">' +
+      'Could not load bangs.json. ' +
+      'Make sure bangs.json is next to this HTML file ' +
+      'and serve the folder over HTTP.' +
+      '</div>';
+  }
+}
+
+
+/* =========================
+   Start
+========================= */
+
+showSearchEngineUrl();
+
 loadBangs();
+
 </script>
+
 </body>
 </html>
-<script>loadBangs();</script>
