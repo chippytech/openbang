@@ -230,6 +230,13 @@
     "label": "OpenRouter"
   },
   {
+    "bang": "!openstreetmap",
+    "name": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org/search?query=$1",
+    "id": "http://www.wikidata.org/entity/P10006",
+    "label": "OpenStreetMap"
+  },
+  {
     "bang": "!allsides",
     "name": "AllSides ID",
     "url": "https://www.allsides.com/search?search=$1&item_bundle=2",
