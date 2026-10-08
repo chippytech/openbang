@@ -1,5 +1,4 @@
 [
-  [
   {
     "bang": "!google",
     "name": "Google Search",
@@ -215,8 +214,7 @@
     "name": "PubMed Search",
     "url": "https://pubmed.ncbi.nlm.nih.gov/?term=$1",
     "label": "PubMed"
-  }
-]
+  },
   {
     "bang": "!enwiki",
     "name": "English Wikipedia",
@@ -412,13 +410,6 @@
     "url": "https://sachsens-schloesser.de/?s=$1",
     "id": "http://www.wikidata.org/entity/P10210",
     "label": "Sachsens Schlösser ID"
-  },
-  {
-    "bang": "!indeed",
-    "name": "Indeed company ID",
-    "url": "https://www.indeed.com/companies/search?q=$1",
-    "id": "http://www.wikidata.org/entity/P10285",
-    "label": "Indeed company ID"
   },
   {
     "bang": "!culture",
@@ -925,13 +916,6 @@
     "label": "Disney A to Z ID"
   },
   {
-    "bang": "!amazon",
-    "name": "Amazon Music artist ID",
-    "url": "https://music.amazon.com/search/$1",
-    "id": "http://www.wikidata.org/entity/P6276",
-    "label": "Amazon Music artist ID"
-  },
-  {
     "bang": "!letterboxd",
     "name": "Letterboxd actor ID",
     "url": "https://letterboxd.com/search/cast-crew/$1/",
@@ -1133,13 +1117,6 @@
     "url": "https://jaxsta.com/search?entity=Songwriters%2CArtists%2CLabels%2CProducers%2CPerformers%2CEngineers%2CPublishers%2COther%20Contributors%2CStudios&query=$1&view=tile",
     "id": "http://www.wikidata.org/entity/P7052",
     "label": "Jaxsta profile ID"
-  },
-  {
-    "bang": "!spotify",
-    "name": "Spotify show/podcast ID",
-    "url": "https://open.spotify.com/search/show:$1",
-    "id": "http://www.wikidata.org/entity/P5916",
-    "label": "Spotify show/podcast ID"
   },
   {
     "bang": "!hudci",
@@ -1408,13 +1385,6 @@
     "label": "Game Classification game ID"
   },
   {
-    "bang": "!huggingface",
-    "name": "Hugging Face user or organization ID",
-    "url": "https://huggingface.co/search/full-text?q=$1",
-    "id": "http://www.wikidata.org/entity/P12201",
-    "label": "Hugging Face user or organization ID"
-  },
-  {
     "bang": "!gamegear",
     "name": "GameGear.jp ID",
     "url": "https://gamegear.jp/?s=$1",
@@ -1490,13 +1460,6 @@
     "url": "https://isni.oclc.org/cbs/DB=1.2/CMD?ACT=SRCHA&IKT=8006&SRT=LST_nd&TRM=$1",
     "id": "http://www.wikidata.org/entity/P213",
     "label": "ISNI"
-  },
-  {
-    "bang": "!github",
-    "name": "GitHub account",
-    "url": "https://github.com/search?type=users&q=$1",
-    "id": "http://www.wikidata.org/entity/P2037",
-    "label": "GitHub account"
   },
   {
     "bang": "!bnf",
@@ -2794,13 +2757,6 @@
     "label": "Wörterbuch zur Verbvalenz ID"
   },
   {
-    "bang": "!arxiv",
-    "name": "arXiv ID",
-    "url": "https://arxiv.org/search/?query=$1&searchtype=paper_id&source=header",
-    "id": "http://www.wikidata.org/entity/P818",
-    "label": "arXiv ID"
-  },
-  {
     "bang": "!maritimt",
     "name": "Maritimt Magasin ship ID",
     "url": "https://maritimt.com/search-page?op=S%C3%B8k&q=$1",
@@ -3170,13 +3126,6 @@
     "url": "https://www.salvador-dali.org/en/artwork/catalogue-raisonne-paintings/obres/?paraulaClau=$1",
     "id": "http://www.wikidata.org/entity/P6595",
     "label": "Paintings by Salvador Dalí ID"
-  },
-  {
-    "bang": "!linkedin",
-    "name": "LinkedIn personal profile ID",
-    "url": "https://www.linkedin.com/search/results/all/?keywords=%22$1%22",
-    "id": "http://www.wikidata.org/entity/P6634",
-    "label": "LinkedIn personal profile ID"
   },
   {
     "bang": "!semanticscholar",
@@ -3604,13 +3553,6 @@
     "url": "https://lille.snl.no/.search?query=$1",
     "id": "http://www.wikidata.org/entity/P12721",
     "label": "Lille norske leksikon ID"
-  },
-  {
-    "bang": "!google",
-    "name": "Google Play author ID",
-    "url": "https://play.google.com/store/info/name?id=$1",
-    "id": "http://www.wikidata.org/entity/P12871",
-    "label": "Google Play author ID"
   },
   {
     "bang": "!milldatabase",
@@ -4719,13 +4661,6 @@
     "label": "Biographical Directory of Federal Judges numeric ID"
   },
   {
-    "bang": "!imdb",
-    "name": "IMDb keyword",
-    "url": "https://www.imdb.com/find/?s=kw&q=$1",
-    "id": "http://www.wikidata.org/entity/P11924",
-    "label": "IMDb keyword"
-  },
-  {
     "bang": "!gematsu",
     "name": "Gematsu game ID",
     "url": "https://www.gematsu.com/search/$1",
@@ -5097,13 +5032,6 @@
     "label": "LyricFind"
   },
   {
-    "bang": "!reddit",
-    "name": "reddit",
-    "url": "https://www.reddit.com/search?q=$1",
-    "id": "http://www.wikidata.org/entity/Q24207151",
-    "label": "reddot"
-  },
-  {
     "bang": "!forvo",
     "name": "Forvo",
     "url": "https://forvo.com/search/$1",
@@ -5172,13 +5100,6 @@
     "url": "https://www.lightnovel.us/search?keywords=$1",
     "id": "http://www.wikidata.org/entity/Q22100324",
     "label": "Light Kingdom"
-  },
-  {
-    "bang": "!yelp",
-    "name": "Yelp",
-    "url": "https://www.yelp.com/search?find_desc=$1",
-    "id": "http://www.wikidata.org/entity/Q2299611",
-    "label": "Yelp"
   },
   {
     "bang": "!yahoo",
@@ -5496,13 +5417,6 @@
     "label": "Trismegistos Geo ID"
   },
   {
-    "bang": "!youtube",
-    "name": "YouTube search",
-    "url": "https://www.youtube.com/results?search_query=$1",
-    "id": "http://www.wikidata.org/entity/P4300",
-    "label": "YouTube playlist ID"
-  },
-  {
     "bang": "!cdc",
     "name": "NIOSHTIC-2 ID",
     "url": "https://www2a.cdc.gov/nioshtic-2/Buildqyr.asp?S1=$1&Submit=Search",
@@ -5741,13 +5655,6 @@
     "label": "Swissubase person ID"
   },
   {
-    "bang": "!walmart",
-    "name": "Walmart product ID",
-    "url": "https://www.walmart.com/search?q=$1&facet=retailer_type:Walmart",
-    "id": "http://www.wikidata.org/entity/P12247",
-    "label": "Walmart product ID"
-  },
-  {
     "bang": "!steamgriddb",
     "name": "SteamGridDB ID",
     "url": "https://www.steamgriddb.com/search/grids?term=$1",
@@ -5795,13 +5702,6 @@
     "url": "https://vsco.co/search/images/$1",
     "id": "http://www.wikidata.org/entity/Q29364760",
     "label": "VSCO"
-  },
-  {
-    "bang": "!tripadvisor",
-    "name": "Tripadvisor ID",
-    "url": "https://www.tripadvisor.com/Search?q=$1&searchNearby=false",
-    "id": "http://www.wikidata.org/entity/P3134",
-    "label": "Tripadvisor ID"
   },
   {
     "bang": "!gutenberg",
@@ -6040,13 +5940,6 @@
     "url": "https://www.legavolley.it/ricerca/?TipoOgg=ATL&Search=$1",
     "id": "http://www.wikidata.org/entity/P4303",
     "label": "Lega Pallavolo Serie A player ID"
-  },
-  {
-    "bang": "!archive",
-    "name": "Monumentos de São Paulo ID",
-    "url": "https://web.archive.org/web/2017/http://www.monumentos.art.br/monumento/",
-    "id": "http://www.wikidata.org/entity/P4360",
-    "label": "Monumentos de São Paulo ID"
   },
   {
     "bang": "!sportbox",
@@ -6614,13 +6507,6 @@
     "url": "https://www.internetforum.eu/component/search/?searchword=$1",
     "id": "http://www.wikidata.org/entity/Q1376694",
     "label": "European Internet Forum"
-  },
-  {
-    "bang": "!tiktok",
-    "name": "TikTok",
-    "url": "https://www.tiktok.com/tag/$1",
-    "id": "http://www.wikidata.org/entity/Q48938223",
-    "label": "TikTok"
   },
   {
     "bang": "!propublica",
@@ -7253,13 +7139,6 @@
     "label": "warheroes.ru ID"
   },
   {
-    "bang": "!soundcloud",
-    "name": "SoundCloud ID",
-    "url": "https://soundcloud.com/search?q=$1",
-    "id": "http://www.wikidata.org/entity/Q568769",
-    "label": "SoundCloud"
-  },
-  {
     "bang": "!sporthorse-data",
     "name": "Sporthorse data ID",
     "url": "https://sporthorse-data.com/search/pedigree?keys=$1",
@@ -7664,13 +7543,6 @@
     "url": "https://www.radionomy.com/en/Search?query=$1",
     "id": "http://www.wikidata.org/entity/Q3417003",
     "label": "Radionomy"
-  },
-  {
-    "bang": "!twitch",
-    "name": "Twitch",
-    "url": "https://www.twitch.tv/search?term=$1",
-    "id": "http://www.wikidata.org/entity/Q4555537",
-    "label": "Twitch"
   },
   {
     "bang": "!uni-hamburg",
@@ -8233,13 +8105,6 @@
     "label": "Social Blade"
   },
   {
-    "bang": "!ebay",
-    "name": "eBay",
-    "url": "https://www.ebay.com/sch/i.html?_nkw=$1",
-    "id": "http://www.wikidata.org/entity/Q58024",
-    "label": "eBay"
-  },
-  {
     "bang": "!buzzfeed",
     "name": "BuzzFeed",
     "url": "https://www.buzzfeed.com/search?q=$1",
@@ -8322,13 +8187,6 @@
     "url": "https://www.dndbeyond.com/search?q=$1",
     "id": "http://www.wikidata.org/entity/Q60764340",
     "label": "D&D Beyond"
-  },
-  {
-    "bang": "!stackoverflow",
-    "name": "Stack Overflow",
-    "url": "https://stackoverflow.com/search?q=$1",
-    "id": "http://www.wikidata.org/entity/Q549037",
-    "label": "Stack Overflow"
   },
   {
     "bang": "!utaten",
@@ -9234,13 +9092,6 @@
     "label": "DicoAdo"
   },
   {
-    "bang": "!x",
-    "name": "X",
-    "url": "https://x.com/search?q=$1",
-    "id": "http://www.wikidata.org/entity/Q918",
-    "label": "X"
-  },
-  {
     "bang": "!elportaldemusica",
     "name": "El portal de Música artist ID",
     "url": "https://www.elportaldemusica.es/site/search?term=$1&filter=artist",
@@ -10128,13 +9979,6 @@
     "url": "https://www.regjeringen.no/en/search/id86008/?term=$1",
     "id": "http://www.wikidata.org/entity/Q173924",
     "label": "government.no"
-  },
-  {
-    "bang": "!bing",
-    "name": "Microsoft Bing",
-    "url": "https://www.bing.com/search?q=$1",
-    "id": "http://www.wikidata.org/entity/Q182496",
-    "label": "Microsoft Bing"
   },
   {
     "bang": "!tcdb",
@@ -11129,13 +10973,6 @@
     "url": "https://catalogue.kanal.brussels/index.php/Search/objects/rootRecordsOnly/1?search=$1",
     "id": "http://www.wikidata.org/entity/Q139552327",
     "label": "Kanal Architecture online catalogue"
-  },
-  {
-    "bang": "!gitlab",
-    "name": "GitLab.com topic ID",
-    "url": "https://gitlab.com/explore/projects/topics?search=$1",
-    "id": "http://www.wikidata.org/entity/P13397",
-    "label": "GitLab.com topic ID"
   },
   {
     "bang": "!zjsnrwiki",
