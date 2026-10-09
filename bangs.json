@@ -5,6 +5,12 @@
     "url": "https://www.google.com/search?q=$1",
     "label": "Google"
   },
+    {
+    "bang": "!commons",
+    "name": "Wikimedia Commons Search",
+    "url": "https://commons.wikimedia.org/w/index.php?search=$1",
+    "label": "Commons"
+  },
   {
     "bang": "!bing",
     "name": "Bing Search",
